@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="FlowDAgger: human-in-the-loop adaptation of frozen flow-matching and diffusion robot policies via action inversion in noise space.">
+  <meta name="keywords" content="FlowDAgger, flow matching, diffusion policy, DAgger, human-in-the-loop, robot learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Under review at CoRL 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified is-size-5">
+          <p>
+            Pretrained generative robot policies built on flow-matching and diffusion have
+            achieved impressive results across a wide range of manipulation tasks. Yet in
+            practice, deployments routinely expose failure modes outside their pretraining
+            distribution.
+            Closing these gaps either demands large-scale data collection or requires online
+            reinforcement learning on physical hardware, which is impractical and unsafe.
+            We present <span class="methodname">FlowDAgger</span>, a sample- and compute-efficient
+            method that brings human-in-the-loop supervision into the latent space of frozen
+            flow-matching and diffusion policies. Our key idea is action inversion:
+            each human expert action is mapped back to the noise that would have produced it under
+            the frozen base policy, via reverse-time integration and local refinement. This inverted noise serves as
+            supervision for a lightweight latent policy that steers the base model at deployment,
+            enabling rapid skill acquisition while retaining its behavioral priors.
+            We evaluate <span class="methodname">FlowDAgger</span> in simulation and on real-world
+            bimanual and single-arm setups, adapting both action-head VLAs and world-action models
+            from a handful of interventions. <span class="methodname">FlowDAgger</span>
+            outperforms fine-tuning and latent-space RL baselines, offering a highly practical
+            path for adapting generative robot policies in the real world.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <p class="has-text-grey">
+          Method overview, qualitative rollouts, and code coming soon.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Template borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
