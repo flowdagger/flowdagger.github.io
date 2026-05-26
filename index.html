@@ -56,24 +56,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified is-size-5">
           <p>
-            Pretrained generative robot policies built on flow-matching and diffusion have
-            achieved impressive results across a wide range of manipulation tasks. Yet in
-            practice, deployments routinely expose failure modes outside their pretraining
-            distribution.
-            Closing these gaps either demands large-scale data collection or requires online
-            reinforcement learning on physical hardware, which is impractical and unsafe.
+            Pretrained generative robot policies based on flow matching and diffusion have
+            achieved impressive results across a wide range of manipulation tasks. Yet real-world
+            deployments routinely expose failure modes outside the pretraining distribution.
+            Closing these gaps typically requires large-scale data collection or online
+            reinforcement learning on physical hardware, which is impractical for rapid and safe
+            adaptation.
             We present <span class="methodname">FlowDAgger</span>, a sample- and compute-efficient
-            method that brings human-in-the-loop supervision into the latent space of frozen
-            flow-matching and diffusion policies. Our key idea is action inversion:
-            each human expert action is mapped back to the noise that would have produced it under
-            the frozen base policy, via reverse-time integration and local refinement. This inverted noise serves as
+            method for adapting frozen generative robot policies from human interventions in
+            latent space. Our key idea is action inversion: each human expert action is mapped to
+            the noise that would have produced it under the frozen base policy, using reverse-time
+            integration followed by local refinement. The resulting inverted noise provides
             supervision for a lightweight latent policy that steers the base model at deployment,
-            enabling rapid skill acquisition while retaining its behavioral priors.
+            enabling rapid skill acquisition while preserving its behavioral priors.
             We evaluate <span class="methodname">FlowDAgger</span> in simulation and on real-world
-            bimanual and single-arm setups, adapting both action-head VLAs and world-action models
-            from a handful of interventions. <span class="methodname">FlowDAgger</span>
-            outperforms fine-tuning and latent-space RL baselines, offering a highly practical
-            path for adapting generative robot policies in the real world.
+            bimanual and single-arm manipulation, adapting both action-head VLAs and world-action
+            models from a handful of interventions. <span class="methodname">FlowDAgger</span>
+            outperforms fine-tuning and latent-space RL baselines, offering a practical path for
+            adapting robot foundation models in the real world.
           </p>
         </div>
       </div>
