@@ -67,13 +67,14 @@
             latent space. Our key idea is action inversion: each human expert action is mapped to
             the noise that would have produced it under the frozen base policy, using reverse-time
             integration followed by local refinement. The resulting inverted noise provides
-            supervision for a lightweight latent policy that steers the base model at deployment,
+            supervision for a lightweight latent policy that steers the base model at deployment time,
             enabling rapid skill acquisition while preserving its behavioral priors.
             We evaluate <span class="methodname">FlowDAgger</span> in simulation and on real-world
             bimanual and single-arm manipulation, adapting both action-head VLAs and world-action
             models from a handful of interventions. <span class="methodname">FlowDAgger</span>
-            outperforms fine-tuning and latent-space RL baselines, offering a practical path for
-            adapting robot foundation models in the real world.
+            outperforms supervised fine-tuning and latent-space RL baselines and preserves
+            pretrained skills on held-out tasks, offering a practical path for adapting robot
+            foundation models in the real world.
           </p>
         </div>
       </div>
